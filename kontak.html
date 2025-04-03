@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="af">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak Ons - The Tech Company</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigasie Balk -->
+    <header>
+        <div class="logo">The Tech Company</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="dienste.html">Dienste</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="kontak.html">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Kontak Seksie -->
+    <section class="contact">
+        <div class="contact-container">
+
+            <!-- Linkerkant: Kontakvorm -->
+            <div class="contact-form">
+                <h1>Kontak Ons</h1>
+                <p>Het jy enige vrae? Vul die vorm in en ons sal so gou as moontlik terugkom na jou toe!</p>
+
+                <form action="#" method="POST">
+                    <label for="name">Naam:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">E-pos:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="message">Boodskap:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+
+                    <button type="submit" class="btn">Stuur</button>
+                </form>
+            </div>
+
+            <!-- Regterkant: Besigheidsinligting -->
+            <div class="contact-info">
+                <h2>Ons Besonderhede</h2>
+                <p><strong>📍 Adres:</strong> Pretoria, Suid-Afrika</p>
+                <p><strong>📞 Telefoon:</strong> 081 601 1335</p>
+                <p><strong>📧 E-pos:</strong> info@thetechcompany.com</p>
+                <p><strong>🕒 Besigheidsure:</strong> Ma - Vr: 08:00 - 17:00</p>
+
+                <!-- Google Maps Integrasie (Net ‘n Voorbeeld, jy kan ‘n regte skakel kry) -->
+                <div class="map-container">
+                    <iframe src="https://maps.app.goo.gl/K2ARXBgwKFEftyqt5" 
+                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 The Tech Company. Alle regte voorbehou.</p>
+    </footer>
+
+</body>
+</html>
+

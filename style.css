@@ -1,0 +1,359 @@
+/* Algemene styl */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    color: white;
+}
+
+/* Navigasie */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222;
+    padding: 15px 50px;
+    position: fixed;
+    width: 95%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #1e90ff;
+}
+
+/* Hero-seksie */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('project1.jpg') no-repeat center center/cover;
+    height: 80vh;
+    padding: 20px;
+    margin-top: 60px;
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.btn {
+    background-color: #1e90ff;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #0077cc;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+	color: white;
+    text-align: center;
+    padding: 10px 20px;
+	font-size: 0.9rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Dienste Seksie */
+.dienste {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.dienste h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.dienste p {
+    font-size: 1.2rem;
+    color: #bbb;
+    margin-bottom: 40px;
+}
+
+/* Dienste Container */
+.dienste-container {
+   display: flex;
+    justify-content: center;
+    gap: 30px; /* Meer spasie tussen items */
+    flex-wrap: wrap; /* Verseker dit pas vir kleiner skerms */
+    max-width: 1200px; /* Maak dit breër */
+    margin: auto;
+}
+
+/* Dienste Kaart */
+.diens {
+    background: #222;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.diens:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Elke diens */
+.diens {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1;
+    min-width: 300px;
+    max-width: 350px; /* Hou die grootte proporsioneel */
+}
+
+/* Beelde */
+.diens img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Diens Inhoud */
+.diens h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.diens p {
+    font-size: 1.1rem;
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+/* Knoppies */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #1e90ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #0073e6;
+}
+
+/* ABOUT US Seksie */
+.about {
+    padding: 80px 20px;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* Beeld Seksie */
+.about-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+}
+
+/* Inhoud Seksie */
+.about-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.about-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.about-content h2 {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    color: #bbb;
+    margin-bottom: 15px;
+}
+
+/* Knoppie */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #1e90ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: #0073e6;
+    transform: scale(1.05);
+}
+
+
+/* KONTAK Seksie */
+.contact {
+    padding: 80px 20px;
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Kontakvorm */
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-form p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 12px;
+    background: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.contact-form button:hover {
+    background: #0073e6;
+    transform: scale(1.05);
+}
+
+/* Besigheidsinligting */
+.contact-info {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    color: #444;
+    margin: 10px 0;
+}
+
+/* Google Maps */
+.map-container {
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
