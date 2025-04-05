@@ -48,7 +48,21 @@
     const navLinks = document.getElementById('nav-links');
     navLinks.classList.toggle('active');
   }
+
+  // Menu sluit wanneer 'n skakel geklik word
+  document.addEventListener('DOMContentLoaded', function () {
+    const navItems = document.querySelectorAll('#nav-links a');
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        document.getElementById('nav-links').classList.remove('active');
+      });
+    });
+
+    // Maak seker die menu is toe op bladsy laai
+    document.getElementById('nav-links').classList.remove('active');
+  });
 </script>
+
 
 </body>
 </html>
