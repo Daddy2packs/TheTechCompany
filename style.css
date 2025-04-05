@@ -20,7 +20,7 @@ header {
     align-items: center;
     background-color: #222;
     padding: 15px 30px;
-    position: fixed;
+    position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -249,21 +249,26 @@ nav ul {
     }
 
     nav ul {
-        flex-direction: column;
-        width: 100%;
-        background-color: #222;
-        max-height: 0;
-        overflow: hidden;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #222;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
     }
 
 	nav ul.active {
-        max-height: 300px; /* Genoeg vir al die links */
+        max-height: 500px; /* Genoeg vir al die links */
     }
 	
     nav ul li {
         width: 100%;
         text-align: center;
-		padding: 10px 0;
+	padding: 15px 0;
     }
 
     .hero h1 {
