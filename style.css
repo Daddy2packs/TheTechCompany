@@ -30,7 +30,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #222;
-    padding: 15px 50px;
+    padding: 15px 20px;
     position: fixed;
     width: 100%;
     top: 0;
@@ -89,14 +89,14 @@ header nav a {
     header nav ul {
         flex-direction: column;  /* Maak die items vertikaal op klein skerms */
         align-items: center;  /* Sentrer die items vertikaal */
-        display: block;
+        display: flex;
     }
 
     header nav ul li {
         display: block;
         margin-right: 0;
-        margin-bottom: 10px;  /* Voeg spasie tussen die items in die vertikale uitleg */
-        width: 100%;     /* Maak elke item vol breedte */
+        margin-bottom: 05px;  /* Voeg spasie tussen die items in die vertikale uitleg */
+        width: 50%;     /* Maak elke item vol breedte */
         text-align: center;
 		height: 60vh;		/* Sentraliseer die teks vir 'n netter voorkoms */
 		margin-top: 80px;
