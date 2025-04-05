@@ -49,19 +49,22 @@
     navLinks.classList.toggle('active');
   }
 
-  // Menu sluit wanneer 'n skakel geklik word
+  // Maak seker menu sluit wanneer jy op 'n skakel klik
   document.addEventListener('DOMContentLoaded', function () {
-    const navItems = document.querySelectorAll('#nav-links a');
+    const navLinks = document.getElementById('nav-links');
+    const navItems = navLinks.querySelectorAll('a');
+
+    // Maak seker dit is toe by laai
+    navLinks.classList.remove('active');
+
     navItems.forEach(item => {
       item.addEventListener('click', () => {
-        document.getElementById('nav-links').classList.remove('active');
+        navLinks.classList.remove('active');
       });
     });
-
-    // Maak seker die menu is toe op bladsy laai
-    document.getElementById('nav-links').classList.remove('active');
   });
 </script>
+
 
 
 </body>
