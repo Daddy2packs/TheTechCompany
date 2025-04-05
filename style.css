@@ -1,27 +1,16 @@
-/* Algemene styl */
+/* Algemene Styl */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;  /* Verhoed horisontale oorgroepe */
     width: 100%;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: 'Arial', sans-serif;
     background-color: #121212;
-    color: white;
-}
-
-.hero, .dienste-container, .contact-container {
-    width: 100%;  /* Maak seker dit gebruik volle breedte */
-    box-sizing: border-box; /* Verhoed ekstra breedte wat die elemente groter maak */
-}
-
-img {
-    max-width: 100%;  /* Maak beelde responsief */
-    height: auto;
+    color: #ffffff;
+    overflow-x: hidden;
 }
 
 /* Navigasie */
@@ -30,266 +19,128 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #222;
-    padding: 15px 20px;
+    padding: 15px 30px;
     position: fixed;
-    width: 100%;
     top: 0;
-    z-index: 1000;
-    box-sizing: border-box;
-}
-
-/* Stuur enige oorgroepe wat nie in die viewport pas nie */
-header, nav {
     width: 100%;
-    overflow-x: hidden;
-}
-
-/* Navigasie balk - begin instellings */
-header nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;  /* Maak dit flexbox, wat die items langs mekaar sal plaas */
-    justify-content: center;
-    flex-wrap: wrap; /* Vertoon items van links na regs */
-	
-}
-
-/* Elke lisitem in die nav bar */
-header nav ul li {
-    margin-right: 10px;
-    margin-bottom: 10px;  /* Voeg 'n bietjie ruimte tussen die items */
-}
-
-header nav a {
-    text-decoration: none;
-    color: #fff;
-    padding: 2.5px 5px; /* Spasie om die knoppies groter te maak */
-    display: flex; /* Maak dit 'n blokkie, sodat die hele knoppie klikbaar is */
-    border-radius: 5px; /* Rond die hoeke van die knoppies af */
+    z-index: 1000;
 }
 
 .logo-img {
-    height: 30px; /* Stel die hoogte van die logo prent in */
-    width: 75px;  /* Laat die breedte outomaties aanpas volgens die hoogte */
+    height: 40px;
+    width: auto;
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 }
 
-.logo {
-    padding: 10px;
-    border-radius: auto;
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
 }
 
-@media screen and (max-width: 768px) {
-    header nav a {
-        font-size: 14px; /* Klein lettergrootte op selfone */
-        padding: 15px;
-    }
-
-    header nav ul {
-        flex-direction: column;  /* Maak die items vertikaal op klein skerms */
-        align-items: center;  /* Sentrer die items vertikaal */
-        display: flex;
-    }
-
-    header nav ul li {
-        display: block;
-        margin-right: 0;
-        margin-bottom: 05px;  /* Voeg spasie tussen die items in die vertikale uitleg */
-        width: 50%;     /* Maak elke item vol breedte */
-        text-align: center;
-		height: 60vh;		/* Sentraliseer die teks vir 'n netter voorkoms */
-		margin-top: 80px;
-    }
-
-    /* Hero-seksie */
-    .hero {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        background: url('project1.jpg') no-repeat center center/cover;
-        height: 80vh;
-        padding: 20px;
-        margin-top: 60px;
-        width: 100%;
-        box-sizing: border-box;
-    }
-
-    .hero-content h1 {
-        font-size: 18px; /* Kleinere koptekste */
-    }
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
-/* Hero-seksie */
+nav a:hover {
+    background-color: #333;
+}
+
+/* Hero Seksie */
 .hero {
     display: flex;
-    align-items: center;
     justify-content: center;
-    text-align: center;
+    align-items: center;
+    height: 90vh;
     background: url('project1.jpg') no-repeat center center/cover;
-    height: 80vh;
+    text-align: center;
     padding: 20px;
-    margin-top: 60px;
-    width: 100%;
-    box-sizing: border-box;
+    margin-top: 70px;
 }
 
 .hero-content {
-    background: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 40px;
     border-radius: 10px;
 }
 
 .hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
 }
 
 .hero p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.btn {
-    background-color: #1e90ff;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: 0.3s;
-}
-
-.btn:hover {
-    background-color: #0077cc;
-}
-
-/* Footer */
-footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 10px 20px;
-    font-size: 0.9rem;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Dienste Seksie */
-.dienste {
-    text-align: center;
-    padding: 80px 20px;
-    background-color: #1a1a1a;
-    color: white;
-}
-
-.dienste h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.dienste p {
     font-size: 1.2rem;
-    color: #bbb;
-    margin-bottom: 40px;
-}
-
-/* Dienste Container */
-.dienste-container {
-   display: flex;
-    justify-content: center;
-    gap: 30px; /* Meer spasie tussen items */
-    flex-wrap: wrap; /* Verseker dit pas vir kleiner skerms */
-    max-width: 1200px; /* Maak dit breër */
-    margin: auto;
-}
-
-/* Dienste Kaart */
-.diens {
-    background: #222;
-    width: 90%;
-    max-width: 600px;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.diens:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
-}
-
-/* Elke diens */
-.diens {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    flex: 1;
-    min-width: 300px;
-    max-width: 350px; /* Hou die grootte proporsioneel */
-}
-
-/* Beelde */
-.diens img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 15px;
-}
-
-/* Diens Inhoud */
-.diens h2 {
-    font-size: 1.8rem;
-    margin-bottom: 10px;
-}
-
-.diens p {
-    font-size: 1.1rem;
-    color: #bbb;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
 }
 
 /* Knoppies */
 .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #1e90ff;
+    background-color: #1e90ff;
     color: white;
-    text-decoration: none;
+    padding: 12px 24px;
     border-radius: 5px;
+    text-decoration: none;
     font-weight: bold;
     transition: background 0.3s;
 }
 
 .btn:hover {
-    background: #0073e6;
+    background-color: #0073e6;
 }
 
-/* ABOUT US Seksie */
-.about {
+/* Dienste Seksie */
+.dienste {
     padding: 80px 20px;
     background-color: #1a1a1a;
-    color: white;
+    text-align: center;
 }
 
-.about-container {
+.dienste-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
 }
 
-/* Beeld Seksie */
-.about-image {
-    flex: 1;
-    min-width: 300px;
+.diens {
+    background: white;
+    color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.diens:hover {
+    transform: scale(1.05);
+}
+
+.diens img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* About Seksie */
+.about {
+    background-color: #1a1a1a;
+    padding: 80px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.about-image, .about-content {
+    flex: 1 1 300px;
     max-width: 500px;
 }
 
@@ -299,135 +150,102 @@ footer {
     box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
 }
 
-/* Inhoud Seksie */
-.about-content {
-    flex: 1;
-    max-width: 600px;
-}
-
 .about-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.about-content h2 {
     font-size: 2rem;
-    margin-top: 20px;
-}
-
-.about-content p {
-    font-size: 1.2rem;
-    color: #bbb;
     margin-bottom: 15px;
 }
 
-/* Knoppie */
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background: #1e90ff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    margin-top: 20px;
-    transition: background 0.3s, transform 0.3s;
+.about-content p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 15px;
 }
 
-.btn:hover {
-    background: #0073e6;
-    transform: scale(1.05);
-}
-
-/* KONTAK Seksie */
+/* Kontak Seksie */
 .contact {
-    padding: 80px 20px;
     background-color: #f5f5f5;
     color: #333;
+    padding: 80px 20px;
     text-align: center;
 }
 
 .contact-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
     flex-wrap: wrap;
-    max-width: 1100px;
-    margin: auto;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 30px;
 }
 
-/* Kontakvorm */
-.contact-form {
-    flex: 1;
-    min-width: 300px;
+.contact-form, .contact-info {
+    flex: 1 1 300px;
     max-width: 500px;
     background: white;
     padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
 }
 
-.contact-form h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.contact-form p {
-    font-size: 1.1rem;
-    color: #555;
-    margin-bottom: 20px;
-}
-
-.contact-form input,
-.contact-form textarea {
+.contact-form input, .contact-form textarea {
     width: 100%;
-    padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ddd;
+    padding: 12px;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1rem;
 }
 
 .contact-form button {
     background-color: #1e90ff;
     color: white;
-    padding: 10px 20px;
     border: none;
+    padding: 12px 24px;
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s;
 }
 
 .contact-form button:hover {
     background-color: #0073e6;
 }
 
-
-
-/* Besigheidsinligting */
-.contact-info {
-    flex: 1;
-    min-width: 300px;
-    max-width: 400px;
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
 }
 
-.contact-info h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
+/* Responsief */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-.contact-info p {
-    font-size: 1.2rem;
-    color: #444;
-    margin: 10px 0;
-}
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
 
-/* Google Maps */
-.map-container {
-    margin-top: 20px;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .dienste-container,
+    .about,
+    .contact-container {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
