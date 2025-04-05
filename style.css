@@ -19,7 +19,7 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #222;
-    padding: 15px 30px;
+    padding: 15px 20px;
     position: sticky;
     top: 0;
     width: 100%;
@@ -233,7 +233,16 @@ footer {
 
 /* Versteek menu op mobiel aanvanklik */
 nav ul {
-    transition: max-height 0.3s ease;
+  transition: max-height 0.3s ease;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 
@@ -263,7 +272,7 @@ nav ul {
     }
 
 	nav ul.active {
-        max-height: 500px; /* Genoeg vir al die links */
+        max-height: 400px; /* Genoeg vir al die links */
     }
 	
     nav ul li {
