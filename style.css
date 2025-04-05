@@ -217,8 +217,32 @@ footer {
     font-size: 0.9rem;
 }
 
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+}
+
+/* Versteek menu op mobiel aanvanklik */
+nav ul {
+    transition: max-height 0.3s ease;
+}
+
+
 /* Responsief */
 @media (max-width: 768px) {
+	 .menu-toggle {
+        display: flex;
+    }
+	
     header {
         flex-direction: column;
         align-items: flex-start;
@@ -227,11 +251,19 @@ footer {
     nav ul {
         flex-direction: column;
         width: 100%;
+        background-color: #222;
+        max-height: 0;
+        overflow: hidden;
     }
 
+	nav ul.active {
+        max-height: 300px; /* Genoeg vir al die links */
+    }
+	
     nav ul li {
         width: 100%;
         text-align: center;
+		padding: 10px 0;
     }
 
     .hero h1 {
