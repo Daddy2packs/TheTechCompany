@@ -1,10 +1,27 @@
 /* Algemene styl */
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;  /* Verhoed horisontale oorgroepe */
+    width: 100%;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #121212;
     color: white;
+}
+
+.hero, .dienste-container, .contact-container {
+    width: 100%;  /* Maak seker dit gebruik volle breedte */
+    box-sizing: border-box; /* Verhoed ekstra breedte wat die elemente groter maak */
+}
+
+img {
+    max-width: 100%;  /* Maak beelde responsief */
+    height: auto;
 }
 
 /* Navigasie */
@@ -15,37 +32,93 @@ header {
     background-color: #222;
     padding: 15px 50px;
     position: fixed;
-    width: 95%;
+    width: 100%;
     top: 0;
     z-index: 1000;
+    box-sizing: border-box;
+}
+
+/* Stuur enige oorgroepe wat nie in die viewport pas nie */
+header, nav {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Navigasie balk - begin instellings */
+header nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;  /* Maak dit flexbox, wat die items langs mekaar sal plaas */
+    justify-content: center;
+    flex-wrap: wrap; /* Vertoon items van links na regs */
+	
+}
+
+/* Elke lisitem in die nav bar */
+header nav ul li {
+    margin-right: 10px;
+    margin-bottom: 10px;  /* Voeg 'n bietjie ruimte tussen die items */
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 2.5px 5px; /* Spasie om die knoppies groter te maak */
+    display: flex; /* Maak dit 'n blokkie, sodat die hele knoppie klikbaar is */
+    border-radius: 5px; /* Rond die hoeke van die knoppies af */
+}
+
+.logo-img {
+    height: 30px; /* Stel die hoogte van die logo prent in */
+    width: 75px;  /* Laat die breedte outomaties aanpas volgens die hoogte */
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 }
 
 .logo {
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
+    padding: 10px;
+    border-radius: auto;
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
+@media screen and (max-width: 768px) {
+    header nav a {
+        font-size: 14px; /* Klein lettergrootte op selfone */
+        padding: 15px;
+    }
 
-nav ul li {
-    margin-left: 20px;
-}
+    header nav ul {
+        flex-direction: column;  /* Maak die items vertikaal op klein skerms */
+        align-items: center;  /* Sentrer die items vertikaal */
+        display: block;
+    }
 
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: 0.3s;
-}
+    header nav ul li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px;  /* Voeg spasie tussen die items in die vertikale uitleg */
+        width: 100%;     /* Maak elke item vol breedte */
+        text-align: center;
+		height: 60vh;		/* Sentraliseer die teks vir 'n netter voorkoms */
+		margin-top: 80px;
+    }
 
-nav ul li a:hover {
-    color: #1e90ff;
+    /* Hero-seksie */
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        background: url('project1.jpg') no-repeat center center/cover;
+        height: 80vh;
+        padding: 20px;
+        margin-top: 60px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hero-content h1 {
+        font-size: 18px; /* Kleinere koptekste */
+    }
 }
 
 /* Hero-seksie */
@@ -58,6 +131,8 @@ nav ul li a:hover {
     height: 80vh;
     padding: 20px;
     margin-top: 60px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .hero-content {
@@ -93,10 +168,10 @@ nav ul li a:hover {
 /* Footer */
 footer {
     background-color: #222;
-	color: white;
+    color: white;
     text-align: center;
     padding: 10px 20px;
-	font-size: 0.9rem;
+    font-size: 0.9rem;
     position: relative;
     bottom: 0;
     width: 100%;
@@ -264,7 +339,6 @@ footer {
     transform: scale(1.05);
 }
 
-
 /* KONTAK Seksie */
 .contact {
     padding: 80px 20px;
@@ -312,25 +386,25 @@ footer {
     margin: 10px 0;
     border: 1px solid #ddd;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
 .contact-form button {
-    width: 100%;
-    padding: 12px;
-    background: #1e90ff;
+    background-color: #1e90ff;
     color: white;
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
-    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
-    transition: background 0.3s, transform 0.3s;
+    transition: background 0.3s;
 }
 
 .contact-form button:hover {
-    background: #0073e6;
-    transform: scale(1.05);
+    background-color: #0073e6;
 }
+
+
 
 /* Besigheidsinligting */
 .contact-info {
