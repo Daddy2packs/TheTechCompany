@@ -249,12 +249,13 @@ nav ul {
     }
 
     nav ul {
-    position: absolute;
+    display: flex;	    
+    position: static;
     top: 70px;
     left: 0;
     width: 100%;
     background-color: #222;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     max-height: 0;
     overflow: hidden;
@@ -285,4 +286,7 @@ nav ul {
         flex-direction: column;
         gap: 20px;
     }
+	.menu-toggle {
+    display: none;
+	}	
 }
