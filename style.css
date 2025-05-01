@@ -19,8 +19,8 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #222;
-    padding: 15px 30px;
-    position: fixed;
+    padding: 15px 20px;
+    position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -217,21 +217,68 @@ footer {
     font-size: 0.9rem;
 }
 
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+}
+
+/* Versteek menu op mobiel aanvanklik */
+nav ul {
+  transition: max-height 0.3s ease;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
 /* Responsief */
 @media (max-width: 768px) {
+	 .menu-toggle {
+        display: flex;
+    }
+	
     header {
         flex-direction: column;
         align-items: flex-start;
     }
 
     nav ul {
-        flex-direction: column;
-        width: 100%;
+    display: flex;	    
+    position: static;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #222;
+    flex-direction: row;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
     }
 
+	nav ul.active {
+        max-height: 400px; /* Genoeg vir al die links */
+    }
+	
     nav ul li {
         width: 100%;
         text-align: center;
+	padding: 15px 0;
     }
 
     .hero h1 {
@@ -248,4 +295,55 @@ footer {
         flex-direction: column;
         gap: 20px;
     }
+	.menu-toggle {
+    display: none;
+	}	
+
+	
 }
+
+/* --- Responsive Navigation --- */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 200px;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+}
+
