@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ons Dienste - The Tech Company</title>
+    <title>Ons Dienste - Echo Byte</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Navigasie Balk -->
     <header>
-        <div class="logo"><img src="Die logo.png" alt="The tech company logo" class="logo-img"></div>
+        <img src="Logo.png" alt="Echo Byte logo" class="logo-img">
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
         <nav>
-            <ul>
+            <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="dienste.html">Dienste</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="about.html">Oor Ons</a></li>
                 <li><a href="kontak.html">Kontak</a></li>
             </ul>
         </nav>
@@ -30,7 +37,7 @@
             
             <!-- Eerste Diens -->
             <div class="diens">
-                <img src="images/pc-build.jpg" alt="Rekenaar Bou">
+                <img src="images/pc-build.jpg" alt="Rekenaarbou">
                 <h2>Rekenaarbou en Opgradering</h2>
                 <p>Ons bou en verbeter rekenaars gebaseer op jou behoeftes.</p>
                 <a href="#" class="btn">Meer Info</a>
@@ -38,7 +45,7 @@
 
             <!-- Tweede Diens -->
             <div class="diens">
-                <img src="images/software-dev.jpg" alt="Sagteware Ontwikkeling">
+                <img src="images/software-dev.jpg" alt="Sagteware-ontwikkeling">
                 <h2>Sagteware-ontwikkeling</h2>
                 <p>Ons ontwikkel pasgemaakte sagteware en oplossings vir jou besigheid.</p>
                 <a href="#" class="btn">Meer Info</a>
@@ -46,7 +53,7 @@
 
             <!-- Derde Diens -->
             <div class="diens">
-                <img src="images/web-design.jpg" alt="Webwerf Ontwikkeling">
+                <img src="images/web-design.jpg" alt="Webwerf-ontwikkeling">
                 <h2>Webwerf-ontwerp en Ontwikkeling</h2>
                 <p>Moderne en responsiewe webwerwe vir enige industrie.</p>
                 <a href="#" class="btn">Meer Info</a>
@@ -54,7 +61,7 @@
 
             <!-- Vierde Diens -->
             <div class="diens">
-                <img src="images/it-support.jpg" alt="IT Ondersteuning">
+                <img src="images/it-support.jpg" alt="IT-ondersteuning">
                 <h2>IT-ondersteuning en Instandhouding</h2>
                 <p>Ons bied instandhouding en ondersteuning vir alle IT-behoeftes.</p>
                 <a href="#" class="btn">Meer Info</a>
@@ -65,10 +72,16 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2025 The Tech Company. Alle regte voorbehou.</p>
+        <p>© 2025 Echo Byte. Alle regte voorbehou.</p>
     </footer>
+
+    <!-- JavaScript vir Hamburger-menu -->
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 
 </body>
 </html>
-
-

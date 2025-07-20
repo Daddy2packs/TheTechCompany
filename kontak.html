@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontak Ons - The Tech Company</title>
+    <title>Kontak Ons - Echo Byte</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Navigasie Balk -->
     <header>
-        <div class="logo"><img src="Die logo.png" alt="The tech company logo" class="logo-img"></div>
+        <img src="Logo.png" alt="Echo Byte logo" class="logo-img">
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
         <nav>
-            <ul>
+            <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="dienste.html">Dienste</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="about.html">Oor Ons</a></li>
                 <li><a href="kontak.html">Kontak</a></li>
             </ul>
         </nav>
@@ -28,7 +35,7 @@
             <!-- Linkerkant: Kontakvorm -->
             <div class="contact-form">
                 <h1>Kontak Ons</h1>
-                <p>Het jy enige vrae? Vul die vorm in en ons sal so gou as moontlik terugkom na jou toe!</p>
+                <p>Het jy enige vrae? Vul die vorm in en ons sal so gou moontlik terugkom na jou toe!</p>
 
                 <form action="#" method="POST">
                     <label for="name">Naam:</label>
@@ -52,10 +59,10 @@
                 <p><strong>📧 E-pos:</strong> info@thetechcompany.com</p>
                 <p><strong>🕒 Besigheidsure:</strong> Ma - Vr: 08:00 - 17:00</p>
 
-                <!-- Google Maps Integrasie (Net ‘n Voorbeeld, jy kan ‘n regte skakel kry) -->
+                <!-- Google Maps -->
                 <div class="map-container">
                     <iframe src="https://maps.app.goo.gl/K2ARXBgwKFEftyqt5" 
-                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
 
@@ -64,9 +71,16 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2025 The Tech Company. Alle regte voorbehou.</p>
+        <p>© 2025 Echo Byte. Alle regte voorbehou.</p>
     </footer>
+
+    <!-- JavaScript vir Hamburger-menu -->
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 
 </body>
 </html>
-

@@ -32,10 +32,32 @@ header {
     filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.5));
 }
 
+/* Hamburger-menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    margin-left: auto;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 2px;
+}
+
+/* Navigasie items */
+nav {
+    margin-left: auto;
+}
+
 nav ul {
     display: flex;
     list-style: none;
     gap: 20px;
+    transition: max-height 0.3s ease;
 }
 
 nav a {
@@ -217,21 +239,42 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Responsief */
+/* Responsiewe Uitleg */
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
     header {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+
+    nav {
+        width: 100%;
     }
 
     nav ul {
         flex-direction: column;
+        align-items: flex-start;
         width: 100%;
+        background-color: #222;
+        max-height: 0;
+        overflow: hidden;
+        padding-left: 20px;
+    }
+
+    nav ul.active {
+        max-height: 300px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
 
     nav ul li {
         width: 100%;
-        text-align: center;
+        padding: 10px 0;
     }
 
     .hero h1 {

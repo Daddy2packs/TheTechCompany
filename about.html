@@ -3,19 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oor Ons - The Tech Company</title>
+    <title>Oor Ons - Echo Byte</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Navigasie Balk -->
     <header>
-        <div class="logo"><img src="Die logo.png" alt="The tech company logo" class="logo-img" ></div>
+        <img src="Logo.png" alt="Echo Byte logo" class="logo-img">
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
         <nav>
-            <ul>
+            <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="dienste.html">Dienste</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="about.html">Oor Ons</a></li>
                 <li><a href="kontak.html">Kontak</a></li>
             </ul>
         </nav>
@@ -33,13 +40,13 @@
             <!-- Inligting Seksie -->
             <div class="about-content">
                 <h1>Wie is ons?</h1>
-                <p>By <strong>The Tech Company</strong> is ons passievol oor tegnologie. Ons missie is om kwaliteit IT-oplossings te bied, of dit nou hardeware, sagteware, of tegniese ondersteuning is.</p>
+                <p>By <strong>Echo Byte</strong> is ons passievol oor tegnologie. Ons missie is om kwaliteit IT-oplossings te bied, of dit nou hardeware, sagteware of tegniese ondersteuning is.</p>
 
                 <h2>Ons Missie</h2>
-                <p>Ons is daartoe verbind om tegnologie makliker en toegankliker te maak vir individue en besighede. Deur innoveerende oplossings en ‘n kliëntgerigte benadering, skep ons ‘n IT-ervaring soos geen ander nie.</p>
+                <p>Ons is daartoe verbind om tegnologie makliker en meer toeganklik te maak vir individue en besighede. Deur innoverende oplossings en 'n kliëntgerigte benadering skep ons 'n IT-ervaring soos geen ander nie.</p>
 
                 <h2>Ons Visie</h2>
-                <p>Om die The tech Company te wees in Suid-Afrika deur top-gehalte tegnologie-oplossings en ongeëwenaarde kliëntediens te lewer.</p>
+                <p>Om die Echo Byte van Suid-Afrika te wees deur topgehalte tegnologie-oplossings en ongeëwenaarde kliëntediens te lewer.</p>
 
                 <a href="dienste.html" class="btn">Ons Dienste</a>
             </div>
@@ -49,8 +56,15 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2025 The Tech Company. Alle regte voorbehou.</p>
+        <p>© 2025 Echo Byte. Alle regte voorbehou.</p>
     </footer>
+
+<script>
+    function toggleMenu() {
+        const navLinks = document.getElementById('nav-links');
+        navLinks.classList.toggle('active');
+    }
+</script>
 
 </body>
 </html>
