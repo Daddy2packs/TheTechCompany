@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Echo Byte — IT Solutions</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Nav -->
+  <header>
+    <img src="Logo_transparntBG.png" alt="Echo Byte" class="logo-img">
+    <div class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </div>
+    <nav id="mainNav">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="dienste.html">Services</a></li>
+        <li><a href="about.html">About us</a></li>
+        <li><a href="kontak.html" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge fade-in">Available in Pretoria & surrounds</div>
+      <h1 class="fade-in fade-in-1">
+        Technology that<br><span class="grad">actually works</span><br>for you.
+      </h1>
+      <p class="fade-in fade-in-2">
+        We build, repair, and optimise PCs and software tailored to your needs — so you can focus on what matters.
+      </p>
+      <div class="hero-actions fade-in fade-in-3">
+        <a href="dienste.html" class="btn btn-primary">Explore services →</a>
+        <a href="kontak.html" class="btn btn-ghost">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <span class="stat-num">100%</span>
+      <span class="stat-label">Hands-on service</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">1</span>
+      <span class="stat-label">Core service areas</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">Fast</span>
+      <span class="stat-label">Turnaround times</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">Local</span>
+      <span class="stat-label">Based in Pretoria</span>
+    </div>
+  </div>
+
+  <!-- Services preview -->
+  <section class="services">
+    <div class="services-header">
+      <span class="section-tag">What we do</span>
+      <h2 class="section-title">Built for real<br>business needs.</h2>
+      <p class="section-sub">Full websites — we handle the tech so you don't have to.</p>
+    </div>
+    <!--<div class="services-grid">
+      <div class="service-card fade-in">
+        <div class="service-icon">🖥️</div>
+        <h2>PC Build & Upgrade</h2>
+        <p>Custom-built machines and hardware upgrades matched to your budget and use case.</p>
+        <a href="dienste.html" class="service-link">Learn more →</a>
+      </div>-->
+      <!--<div class="service-card fade-in fade-in-1">
+        <div class="service-icon">⚙️</div>
+        <h2>Software Development</h2>
+        <p>Purpose-built software and digital tools that solve real problems for your business.</p>
+        <a href="dienste.html" class="service-link">Learn more →</a>
+      </div>-->
+      <div class="service-card fade-in fade-in-2">
+        <div class="service-icon">🌐</div>
+        <h2>Web Design & Development</h2>
+        <p>Modern, responsive websites for any industry — fast, clean, and built to convert.</p>
+        <a href="dienste.html" class="service-link">Learn more →</a>
+      </div>
+      <!--<div class="service-card fade-in fade-in-3">
+        <div class="service-icon">🔧</div>
+        <h2>IT Support & Maintenance</h2>
+        <p>Ongoing support and maintenance for all your IT infrastructure and devices.</p>
+        <a href="dienste.html" class="service-link">Learn more →</a>
+      </div>-->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2026 Echo Byte. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="dienste.html">Services</a>
+      <a href="about.html">About</a>
+      <a href="kontak.html">Contact</a>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const nav    = document.getElementById('mainNav');
+    toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  </script>
+</body>
+</html>
