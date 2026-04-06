@@ -9,7 +9,7 @@
 <body>
 
   <header>
-    <img src="Logo_transparntBG.png" alt="Echo Byte" class="logo-img">
+    <img src="Logo.png" alt="Echo Byte" class="logo-img">
     <div class="menu-toggle" id="menuToggle">
       <span></span><span></span><span></span>
     </div>
@@ -31,7 +31,7 @@
   </div>
 
   <!-- About section -->
-  <section class="about" style="padding-top: 80px;">
+  <section class="about">
     <div class="about-inner">
 
       <div class="about-visual fade-in">
@@ -51,11 +51,11 @@
         <span class="section-tag">Our story</span>
         <h2 class="section-title">Passionate about tech.<br>Built for people.</h2>
         <p class="section-sub" style="margin-bottom: 28px;">
-          At Echo Byte, we believe technology should work for you — not the other way around. We started because too many people were overpaying for underwhelming web services, or struggling alone with problems that should have been simple to fix.
+          At Echo Byte, we believe technology should work for you — not the other way around. We started because too many people were overpaying for underwhelming IT services, or struggling alone with problems that should have been simple to fix.
         </p>
         <ul class="about-list">
-          <li>We work with businesses of all sizes</li>
-          <li>Every solution is tailored </li>
+          <li>We work with individuals and businesses of all sizes</li>
+          <li>Every solution is tailored — nothing cookie-cutter</li>
           <li>We explain things in plain language, not jargon</li>
           <li>Fast response times and honest pricing, always</li>
         </ul>
@@ -65,27 +65,53 @@
   </section>
 
   <!-- Mission / Vision -->
-  <section style="padding: 80px 40px; background: var(--bg);">
-    <div style="max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+  <section class="mv-section">
+    <div class="mv-grid">
 
-      <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 40px;" class="fade-in">
-        <div style="font-size: 2rem; margin-bottom: 20px;">🎯</div>
-        <h3 style="font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 800; margin-bottom: 12px;">Our Mission</h3>
-        <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.7;">
-          To make technology more accessible and effective for businesses — through innovative, client-focused solutions that actually solve problems.
+      <div class="mv-card fade-in">
+        <div class="mv-icon">🎯</div>
+        <h3 class="mv-title">Our Mission</h3>
+        <p class="mv-body">
+          To make technology more accessible and effective for individuals and businesses — through innovative, client-focused solutions that actually solve problems.
         </p>
       </div>
 
-      <div style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 40px;" class="fade-in fade-in-1">
-        <div style="font-size: 2rem; margin-bottom: 20px;">🔭</div>
-        <h3 style="font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 800; margin-bottom: 12px;">Our Vision</h3>
-        <p style="color: var(--muted); font-size: 0.95rem; line-height: 1.7;">
-          To be the go-to website partner that people and businesses in our region trust and return to — known for reliability, honesty, and work that lasts.
+      <div class="mv-card fade-in fade-in-1">
+        <div class="mv-icon">🔭</div>
+        <h3 class="mv-title">Our Vision</h3>
+        <p class="mv-body">
+          To be the go-to IT partner that people and businesses in our region trust and return to — known for reliability, honesty, and work that lasts.
         </p>
       </div>
 
     </div>
   </section>
+
+  <style>
+    .mv-section { padding: 60px 40px 100px; background: var(--bg); }
+    .mv-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .mv-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 40px;
+    }
+    .mv-icon  { font-size: 2rem; margin-bottom: 20px; }
+    .mv-title { font-family: 'Syne', sans-serif; font-size: 1.3rem; font-weight: 800; margin-bottom: 12px; }
+    .mv-body  { color: var(--muted); font-size: 0.95rem; line-height: 1.7; }
+
+    @media (max-width: 768px) {
+      .mv-section { padding: 40px 20px 70px; }
+      .mv-grid { grid-template-columns: 1fr; }
+      .mv-card { padding: 28px 24px; }
+    }
+  </style>
 
   <footer>
     <p>© 2026 Echo Byte. All rights reserved.</p>
