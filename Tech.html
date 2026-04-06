@@ -41,6 +41,26 @@
     <footer>
         <p>© 2026 Echo Byte. All rights reserved.</p>
     </footer>
+	
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById('nav-links');
+    navLinks.classList.toggle('active');
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const navItems = document.querySelectorAll('#nav-links a');
+    navItems.forEach(item => {
+      item.addEventListener('click', () => {
+        document.getElementById('nav-links').classList.remove('active');
+      });
+    });
+
+    document.getElementById('nav-links').classList.remove('active');
+  });
+</script>
+
+
 
     <!-- JavaScript vir Hamburger-menu -->
     <script>

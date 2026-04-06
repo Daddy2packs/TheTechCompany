@@ -19,8 +19,8 @@ header {
     justify-content: space-between;
     align-items: center;
     background-color: #222;
-    padding: 15px 30px;
-    position: fixed;
+    padding: 15px 20px;
+    position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -272,6 +272,10 @@ footer {
         padding-bottom: 10px;
     }
 
+	nav ul.active {
+        max-height: 400px; /* Genoeg vir al die links */
+    }
+	
     nav ul li {
         width: 100%;
         padding: 10px 0;
@@ -291,4 +295,55 @@ footer {
         flex-direction: column;
         gap: 20px;
     }
+	.menu-toggle {
+    display: none;
+	}	
+
+	
 }
+
+/* --- Responsive Navigation --- */
+.menu-toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 200px;
+        padding: 1rem;
+        border-radius: 8px;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        color: white;
+        text-decoration: none;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+}
+
