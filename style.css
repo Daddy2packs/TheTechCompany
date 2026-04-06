@@ -62,7 +62,7 @@ header {
 }
 
 .logo-img {
-  height: 75px;
+  height: 36px;
   width: auto;
 }
 
@@ -680,9 +680,16 @@ footer p { font-size: 0.85rem; color: var(--muted); }
   .about-inner { grid-template-columns: 1fr; gap: 40px; }
   .about-float { display: none; }
 
-  .contact { padding: 70px 20px; }
+  .contact { padding: 60px 20px 80px; }
   .contact-inner { grid-template-columns: 1fr; gap: 40px; }
   .contact-form { padding: 28px 20px; }
+  .contact-header .section-title { font-size: 1.8rem; }
+
+  .page-hero { padding: calc(var(--nav-h) + 40px) 20px 48px; }
+  .page-hero .section-title { font-size: 2rem; }
+  .page-hero .section-sub { font-size: 0.95rem; }
+
+  .section-title { font-size: 1.9rem; }
 
   footer { padding: 24px 20px; flex-direction: column; text-align: center; }
   .footer-links { justify-content: center; }
