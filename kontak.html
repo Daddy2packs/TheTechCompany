@@ -3,20 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontak Ons - The Tech Company</title>
+    <title>Kontak Ons - Echo Byte</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <!-- Navigasie Balk -->
     <header>
-        <div class="logo"><img src="Die logo.png" alt="The tech company logo" class="logo-img"></div>
+        <img src="Logo.png" alt="Echo Byte logo" class="logo-img">
+
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
         <nav>
-            <ul>
+            <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="dienste.html">Dienste</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="kontak.html">Kontak</a></li>
+                <li><a href="dienste.html">Services</a></li>
+                <li><a href="about.html">About us</a></li>
+                <li><a href="kontak.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -27,35 +34,35 @@
 
             <!-- Linkerkant: Kontakvorm -->
             <div class="contact-form">
-                <h1>Kontak Ons</h1>
-                <p>Het jy enige vrae? Vul die vorm in en ons sal so gou as moontlik terugkom na jou toe!</p>
+                <h1>Contact us</h1>
+                <p>Have any questions? Fill the from in and we will reply as soon as possible!</p>
 
                 <form action="#" method="POST">
-                    <label for="name">Naam:</label>
+                    <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
 
-                    <label for="email">E-pos:</label>
+                    <label for="email">E-mail:</label>
                     <input type="email" id="email" name="email" required>
 
-                    <label for="message">Boodskap:</label>
+                    <label for="message">Message:</label>
                     <textarea id="message" name="message" rows="5" required></textarea>
 
-                    <button type="submit" class="btn">Stuur</button>
+                    <button type="submit" class="btn">Send</button>
                 </form>
             </div>
 
             <!-- Regterkant: Besigheidsinligting -->
             <div class="contact-info">
-                <h2>Ons Besonderhede</h2>
-                <p><strong>📍 Adres:</strong> Pretoria, Suid-Afrika</p>
-                <p><strong>📞 Telefoon:</strong> 081 601 1335</p>
-                <p><strong>📧 E-pos:</strong> info@thetechcompany.com</p>
-                <p><strong>🕒 Besigheidsure:</strong> Ma - Vr: 08:00 - 17:00</p>
+                <h2>Our details</h2>
+                <p><strong>📍 Address:</strong> Pretoria, South-Africa</p>
+                <p><strong>📞 Phone number:</strong> 081 601 1335</p>
+                <p><strong>📧 E-mail:</strong> info@thetechcompany.com</p>
+                <p><strong>🕒 Biussnes hours:</strong> Mon - Fri: 08:00 - 17:00</p>
 
-                <!-- Google Maps Integrasie (Net ‘n Voorbeeld, jy kan ‘n regte skakel kry) -->
+                <!-- Google Maps -->
                 <div class="map-container">
                     <iframe src="https://maps.app.goo.gl/K2ARXBgwKFEftyqt5" 
-                    width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                        width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
 
@@ -64,9 +71,16 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2025 The Tech Company. Alle regte voorbehou.</p>
+        <p>© 2026 Echo Byte. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript vir Hamburger-menu -->
+    <script>
+        function toggleMenu() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('active');
+        }
+    </script>
 
 </body>
 </html>
-
